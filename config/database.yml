@@ -23,8 +23,7 @@ default: &default
 
 development:
   <<: *default
-  # TODO: Change database name
-  database: rails_new_development
+  database: rawls_md_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,8 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  # TODO: Change database name
-  database: rails_new_test
+  database: rawls_md_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,8 +80,6 @@ test:
 #
 production:
   <<: *default
-  # TODO: Change database name
-  database: rails_new_production
-  # TODO: Change user name
-  username: rails_new
+  database: rawls_md_production
+  username: rawls_md
   password: <%= ENV['RAILS_NEW_DATABASE_PASSWORD'] %>

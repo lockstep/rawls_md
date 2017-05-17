@@ -1,0 +1,79 @@
+.groups {
+  font-family: 'Roboto';
+  color: $font-black;
+
+  h2 {
+    font-weight: bold;
+    color: $main-green;
+  }
+  .table-header {
+    color: $white;
+    background: $main-green;
+    border-color: $main-green;
+    .current {
+      padding-right: 20px;
+    }
+    .asc {
+      background: image-url("sort-asc.png");
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+    .desc {
+      background: image-url("sort-desc.png");
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+    .sort-section {
+      padding-left: 50px;
+      display: inline-block;
+      a {
+        color: white;
+      }
+    }
+    th {
+      border-bottom: 0px;
+    }
+  }
+
+  table {
+    a {
+      color: $font-black;
+      &:hover {
+        color: $sub-green;
+        text-decoration: none;
+      }
+    }
+    tbody {
+     tr:nth-of-type(odd) {
+      background-color: $dark-white;
+      }
+    }
+  }
+  .btn-sub-color {
+    background: $sub-green;
+    color: $white;
+  }
+  .group-name {
+    background: $main-green;
+    color: $white;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    padding: 5px 15px;
+    margin-top: 20px;
+    display: inline-block
+  }
+  .underline {
+    height: 3px;
+    margin-top: -3px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid $main-green;
+  }
+  .green-border {
+    border: 2px solid $main-green;
+  }
+}
+
+.bottom-line {
+  border-bottom: 2px solid $grey;
+}

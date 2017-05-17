@@ -33,6 +33,9 @@ gem 'turbolinks', '~> 5'
 # Application monitoring
 gem 'newrelic_rpm'
 
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
 # Authorization
 gem 'pundit'
 

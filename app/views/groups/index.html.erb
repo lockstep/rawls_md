@@ -1,0 +1,44 @@
+<% content_for :page_title, 'List of Groups' %>
+<div class="container groups">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Groups</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="table-responsive">
+        <table class="table green-border">
+          <thead class="table-header">
+            <tr>
+              <th>Group Name</th>
+              <th>
+                State/Country 
+                <div class="sort-section">
+                  Sort by
+                  <div class="btn btn-xs btn-sub-color">
+                    <%= sortable "state" %>
+                  </div>
+                  <div class="btn btn-xs btn-sub-color">
+                    <%= sortable "country" %>
+                  </div>
+                </div> 
+                
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @groups.each do |group| %>
+              <tr>
+                <td>
+                 <%= link_to group.name, group_path(group) %>
+                </td>
+                <td><%= group.show_state_or_country %></td>
+              </tr>
+            <%end%>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

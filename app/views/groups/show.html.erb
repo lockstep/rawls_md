@@ -1,0 +1,17 @@
+<% content_for :page_title, 'List of Groups' %>
+<div class="container groups">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="group-name"><%= @group.name %></div>
+      <div class="underline"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <p>Description: <%= @group.description %></p>
+      <p>State: <%= @group.show_state_or_country %></p>
+      <p>Website: <%= link_to @group.website, @group.website %></p>
+      <p>Facebook Page: <%= link_to @group.facebook_page, @group.facebook_url %></p>
+    </div>
+  </div>
+</div>

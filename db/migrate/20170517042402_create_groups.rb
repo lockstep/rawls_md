@@ -3,7 +3,7 @@ class CreateGroups < ActiveRecord::Migration[5.1]
     create_table :groups do |t|
       t.string :name
       t.string :state
-      t.string :country
+      t.string :country, default: ""
       t.text :description
       t.string :website
       t.string :facebook_page

@@ -62,6 +62,12 @@ gem 'sidekiq'
 # Static pages
 gem 'high_voltage', '~> 3.0.0'
 
+# Dependency for Rails Admin
+gem 'erubis', '~> 2.7'
+
+# Admin gem
+gem 'rails_admin', '~> 1.1.1'
+
 group :production do
   gem 'lograge'
   gem 'rack-timeout'

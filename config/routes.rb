@@ -3,9 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  unauthenticated :user do
-    root to: 'groups#index'
-  end
+  root to: 'groups#index'
 
   resources :groups, only: %i[index show]
 end

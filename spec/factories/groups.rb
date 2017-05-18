@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :group do
     sequence(:name) { |n| "My Group #{n}" }
-    state 'New York'
+    state ''
     country ''
     description 'test description'
     website 'https:\\rawlsmd.com'

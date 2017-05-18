@@ -4,7 +4,10 @@ class GroupsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
-    @groups = Group.order("#{sort_column} #{sort_direction}")
+    not_null_groups = Group.where("#{sort_column} <> ''")
+                           .order("#{sort_column} #{sort_direction}")
+    null_groups = Group.where("#{sort_column} = ''")
+    @groups = not_null_groups + null_groups
   end
 
   def show

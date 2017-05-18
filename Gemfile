@@ -65,10 +65,8 @@ gem 'sidekiq'
 # Static pages
 gem 'high_voltage', '~> 3.0.0'
 
-# Dependency for Rails Admin
-gem 'erubis', '~> 2.7'
-
 # Admin gem
+gem 'erubis', '~> 2.7'
 gem 'rails_admin', '~> 1.1.1'
 
 group :production do

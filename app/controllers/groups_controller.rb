@@ -4,9 +4,11 @@ class GroupsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
+    second_column = sort_column == 'state' ? 'country' : 'state'
     not_null_groups = Group.where("#{sort_column} <> ''")
                            .order("#{sort_column} #{sort_direction}")
     null_groups = Group.where("#{sort_column} = ''")
+                       .order("#{second_column} #{sort_direction}")
     @groups = not_null_groups + null_groups
   end
 

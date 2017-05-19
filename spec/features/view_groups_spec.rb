@@ -54,8 +54,8 @@ feature 'View Groups Spec' do
           all_row = all('tbody tr')
           expect(all_row[0].all('td')[1].text).to eq @state_2.state
           expect(all_row[1].all('td')[1].text).to eq @state_1.state
-          expect(all_row[2].all('td')[1].text).to eq @country_1.country
-          expect(all_row[3].all('td')[1].text).to eq @country_2.country
+          expect(all_row[2].all('td')[1].text).to eq @country_2.country
+          expect(all_row[3].all('td')[1].text).to eq @country_1.country
         end
       end
     end
@@ -81,8 +81,8 @@ feature 'View Groups Spec' do
           all_row = all('tbody tr')
           expect(all_row[0].all('td')[1].text).to eq @country_2.country
           expect(all_row[1].all('td')[1].text).to eq @country_1.country
-          expect(all_row[2].all('td')[1].text).to eq @state_1.state
-          expect(all_row[3].all('td')[1].text).to eq @state_2.state
+          expect(all_row[2].all('td')[1].text).to eq @state_2.state
+          expect(all_row[3].all('td')[1].text).to eq @state_1.state
         end
       end
     end
